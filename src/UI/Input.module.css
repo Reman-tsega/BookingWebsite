@@ -1,0 +1,9 @@
+.input{
+    border: none;
+    outline: none;
+    z-index: -2;
+}
+.lsOptionInput{
+    width: 50px;
+    z-index: -2;
+  }

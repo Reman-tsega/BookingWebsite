@@ -1,0 +1,17 @@
+.homeContainer{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hometitle{
+    color: #000;
+    width: 1023px;
+    font-size: 20px;
+    /* position: absolute; */
+    /* left: -160px; */
+    /* bottom: 0px; */
+
+}

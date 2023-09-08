@@ -1,0 +1,56 @@
+.button {
+    color: white;
+    background-color:#003580;
+    padding: 0.5rem;
+    margin:00.5rem;
+    border:'2px solid black';
+    border-radius:0.6rem;
+}
+.mailbtn{
+    color: aqua;
+    padding: auto;
+    border:'2px solid black';
+
+}
+.but {
+    color:green;
+    background: linear-gradient('#000');
+    padding: 1rem;
+}
+
+.sub-btn {
+    color: rgb(0, 11, 8);
+    font-weight: bolder;
+    background-color: rgb(162, 221, 43);
+    padding: 0.5rem 0.4rem;
+    border: 2px hoover rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+}
+.siCheckButton{
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+.sub-btn:hover {
+    color: yellowgreen;
+    background-color: black;
+    border-color: yellowgreen;
+}
+.okay-btn {
+    color: rgb(0, 11, 8);
+    font-weight: bolder;
+    background-color: rgb(255, 0, 4);
+    padding: 0.5rem 0.4rem;
+    border: 2px hoover rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+}
+
+.okay-btn:hover {
+    color: yellowgreen;
+    background-color: blue;
+    border-color: yellowgreen;
+}

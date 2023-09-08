@@ -1,0 +1,76 @@
+.backdrop {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    z-index: -1;
+}
+
+.modal {
+    position: fixed;
+    top: 20vh;
+    left: 5%;
+    width: 90%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, );
+    z-index: -1;
+    animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width:750px) {
+    .modal {
+        width: 40rem;
+        left: calc(50%-20rem);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #800040;
+    color: white;
+    border: 1px solid #800040;
+    margin: 0 1rem;
+  }
+  .btnp {
+    font: inherit;
+    /* padding: 0.5rem 1.5rem; */
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #800040;
+    color: white;
+    border: 1px solid #0a0a0a;
+    margin: 0 1rem;
+  }
+  
+  .btn:hover {
+    background-color: #9c1458;
+    border-color: #9c1458;
+  }
+  
+  .btn--alt {
+    background-color: transparent;
+    color: #800040;
+  }
+  
+  .btn--alt:hover {
+    background-color: #f8dae9;
+  }
+  
