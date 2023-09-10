@@ -80,9 +80,11 @@ function Header(props) {
             </div>
         </div>  
     { props.type !== "list" && <>
+        <div>
            <h1> A life time of discounts? it's Genius.</h1>
             <p> Get rewarded for your travels unlock instant savings of 10% or more with a free Shersher booking account</p>
             <button className={classes.headerBtn} >SignIn/Register</button>
+        </div>
             <div className={classes.headerSearch}>
                 <div className={classes.headerSearchItem}>
                     <FontAwesomeIcon className={classes.headerIcon} icon={faBed} />
@@ -93,8 +95,12 @@ function Header(props) {
                     />
                  </div>
                 <div className={classes.headerSearchItem}>
-                    <FontAwesomeIcon className={classes.headerIcon} icon={faCalendarDays} />
-                    <span className={classes.headerSearchText} onClick={()=>setOpenDate(!openDate)} > {`${format(date[0].startDate,"MM/dd/yyyy")} to ${format(date[0].endDate,"MM/dd/yyyy")} `}</span>
+                    <FontAwesomeIcon onClick={()=>setOpenDate(!openDate)} className={classes.headerIcon} icon={faCalendarDays} />
+                    <span 
+                    className={classes.headerSearchText} 
+                    onClick={()=>setOpenDate(!openDate)} > 
+                    {`${format(date[0].startDate,"MM/dd/yyyy")} to ${format(date[0].endDate,"MM/dd/yyyy")} `}
+                    </span>
                     {openDate && <DateRange
                         editableDateInputs={true}
                         onChange={item => setDate([item.selection])}
@@ -102,13 +108,15 @@ function Header(props) {
                         ranges={date}
                         minDate={new Date()}
                         className={classes.dateRange}
+                        // monthWidth ={6}
+                        // style={{width:"290px"}}
                         />}
         {openDate && <BackDrop OnclickBackDrop = {close} />}
 
                  </div>
                 <div className={classes.headerSearchItem}>
                  <div className={openDate?classes.placeholder:''}>
-                    <FontAwesomeIcon className={classes.headerIcon} icon={faBed} />
+                    <FontAwesomeIcon onClick={()=>setOpenOption(!openOption)} className={classes.headerIcon} icon={faBed} />
                     <span className={classes.headerSearchText} onClick={()=>setOpenOption(!openOption)} > {`${option.adult} . adult ${option.children} . children ${option.room} bed-room `}</span>
                  </div>
                     {openOption && 

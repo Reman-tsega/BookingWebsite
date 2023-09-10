@@ -28,7 +28,7 @@ function SeachIem() {
     <div className="siDetails">
       <div className="siRating">
         <span>Excellent</span>
-        <button>8.9</button>
+        <Button>8.9</Button>
       </div>
       <div className="siDetailTexts">
         <span className="siPrice">$112</span>

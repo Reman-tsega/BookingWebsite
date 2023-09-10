@@ -91,7 +91,8 @@ margin: 20px 0px;
 }
 .dateRange{
     position: absolute;
-    top:50px
+    top:50px;
+    width: auto;
 }
 .options{
 position: absolute;
@@ -110,6 +111,7 @@ margin-left: 10px;
     /* flex-direction: column; */
     justify-content: space-between;
     margin: 6px 0px;
+    
 
 }
 .optionContainer{
@@ -137,3 +139,76 @@ cursor: not-allowed;
 .placeholder{
     display: none;
 }
+/* Header.module.css */
+
+/* Existing CSS code for non-responsive styles */
+
+@media (max-width: 768px) {
+    .headerContainer{
+        align-items: center;
+        /* width: ; */
+        display: flex;
+        justify-content: center;
+    }
+    .headerList {
+      display: none;
+    }
+  
+    .headerSearch {
+      margin-top: 10px;
+      width: 80vw;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .headerSearchItem {
+      flex: 1;
+    }
+  
+    .headerSearchInput {
+      width: 100%;
+    }
+  
+    .headerSearchText {
+      display: none;
+      /* width: auto; */
+    }
+  
+    .dateRange{
+        position: absolute;
+        left: -10px;
+    }
+    .options {
+      top: 40px;
+      left: 10px;
+    }
+    .optionItem{
+        /* position: absolute; */
+        /* margin-left: -80px; */
+    }
+  
+    .link {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #003580;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    .link.open {
+      max-height: 200px;
+    }
+  
+    .linkItem {
+      text-align: center;
+      color: white;
+      font-weight: 500;
+      list-style: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+  }

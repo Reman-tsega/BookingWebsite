@@ -1,24 +1,38 @@
-.footer{
+.footer {
     width: 100%;
     max-width: 1023px;
     font-size: 12px;
-}
-
-.fLists{
+  }
+  
+  .fLists {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 60px;
-}
-
-.fList{
+  }
+  
+  .fList {
     list-style: none;
     padding: 0;
     width: 160px;
-    /* align-items: start; */
-}
-.fListItem{
+  }
+  
+  .fListItem {
     margin-bottom: 10px;
     color: #003580;
     cursor: pointer;
-}
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .fLists {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .fList {
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+    }
+  }

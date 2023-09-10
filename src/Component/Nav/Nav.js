@@ -1,41 +1,49 @@
-import React from 'react'
-// import classes from "./Nav.module.css"
-import './Nav.css'
-// import Header from '../Header/Header'
-// import Home from '../../Pages/Home/Home'
-import { Link, useNavigate } from 'react-router-dom'
-// import List from '../../Pages/List/List'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Nav.css';
 
-function Nav() {
-  const navigate = useNavigate()
+const Nav = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <>
-    <div className='navbar'>
-        <div className='navContainer'>
-            <span className='logo'>Shersher booking</span>
-            <ul className='link'>
-                <Link to='/'>
-                     <li>Home</li>
-                </Link>
-                {/* <Link to='/list'> */}
-                      <li onClick={()=>navigate("/list")} >List</li>
-                {/* </Link> */}
-                <Link to='/hotel'>
-                      <li>Hotel</li>
-                </Link>
-            </ul>
-            <div className='navItems'>
-                <button>Register</button>
-                <button>Login</button>
-            </div>
+    <nav className="navbar">
+      <div className="navContainer">
+        <div className="hamburger" onClick={handleMenuToggle}>
+          <span>-</span>
+          <span>-</span>
+          <span></span>
         </div>
+        <Link to="/" className="logo">Shersher booking</Link>
+        
+        <ul className={`link ${isMenuOpen ? 'open' : ''}`}>
+            <Link to="/">
+          <li className="linkItem" onClick={handleMenuToggle}>
+              Home
+          </li>
+              </Link>
+            <Link to="/list">
+          <li className="linkItem" onClick={handleMenuToggle}>
+              List
+          </li>
+              </Link>
+            <Link to="/hotel">
+          <li className="linkItem" onClick={handleMenuToggle}>
+              Hotel
+          </li>
+              </Link>
+        </ul>
+        <div className="navItems">
+          <button className="navButton">Register</button>
+          <button className="navButton">Login</button>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-    </div>
-    {/* <Home/> */}
-    {/* <List/> */}
-           
-    </>
-  )
-}
-
-export default Nav
+export default Nav;
