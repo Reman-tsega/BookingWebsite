@@ -1,1 +1,1 @@
-react project
+this project is hotel booking website
